@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>7-3</title>
+<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+  First Name : <input v-model="first">{{first}}<br>
+  Last Name : <input v-model="last">{{last}}<br>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      first: '',
+       last: ''
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="https://unpkg.com/vue"></script>
+  <title>Lipstick series</title>
+</head>
+<body>
+<div class="menu" id="menu">
+  <ul>
+    <li v-for="classd in classData">
+      <p class="colour1">
+        <a href="#"> {{classd.name }}</a>
+      </p>
+    </li>
+  </ul>
+</div>
+<script>
+  new Vue({
+    el: '#menu',
+    data: {
+      classData: [
+        { name: 'Dior 028# Actrice Lipstick' },
+        { name: 'Almond milk tea' },
+        { name: 'Bobbi Brown Rock&Red' },
+        { name: 'CANMAKE Creamy Apricot' }
+      ]
+    }
+  })
+</script>
+</body>
+</html>

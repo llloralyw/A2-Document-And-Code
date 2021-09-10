@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="https://unpkg.com/vue"></script>
+  <title>Lipstick series</title>
+</head>
+<body>
+<section class="order" id="order">
+			<h1>ORDER</h1>
+			<h2>You are about to commit to pay for the following products:</h2>
+			<p class="red">Please complete the form and press 'Send Order'.</p>
+			<p><span class="txt">Your Name</span>
+				<input type="text" v-model="message1" id="name"><span class="red">{{ message1 }}</span>
+			</p>
+			<p><span class="txt">Telephone number</span>
+				<input type="text" v-model="message2" id="number"><span class="red">{{ message2 }}</span>
+			</p>
+			<p><span class="txt">Receiving address</span>
+				<input type="text" class="i1" v-model="message3" id="address"><span class="red">{{ message3 }}</span>
+			</p>
+			</p>
+			<p><span class="txt">Remarks</span>
+				<input type="text" class="i1" value="" v-model="message4" id="remarks"><span class="red">{{ message4 }}</span>
+			</p>
+			</p>
+			<p><span>
+    <input type="button" value="Send Order" class="sub" onclick="checkForm();">
+    </span>
+				<input type="reset" value="Cancel Order" class="res">
+			</p>
+		</section>
+<script>
+new Vue({
+  el: '#order',
+  data: {
+    message1: '',
+     message2: '',
+      message3: '',
+    message4: ''
+  }
+})
+</script>
+</body>
+</html>

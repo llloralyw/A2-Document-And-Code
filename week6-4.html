@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>6-4</title>
+<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<footer id="foot">
+			<copy></copy>
+		</footer>
+<script>
+// register
+Vue.component('copy', {
+  template: '<p>2021 Lipstick series</p>'
+})
+// Create root instance
+new Vue({
+  el: '#foot'
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>5</title>
+	<script src="https://unpkg.com/vue"></script>
+	<style>
+		.active {
+			background:rgba(0,0,0,0.5);
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+<table border="1" cellspacing="0" cellpadding="0" id="evaluation">
+	<tr v-bind:class="{ 'active': isActive }">
+		<td width="150" class="w50">Product name</td>
+		<td width="100" class="w50">Test item</td>
+		<td width="50">Weight</td>
+		<td class="hide">Evaluation content</td>
+		<td width="80">Evaluation grade</td>
+	</tr>
+	<tr>
+		<td>Dior Rouge 999 Matte Lipstick</td>
+		<td>Heavy Metal</td>
+		<td>30%</td>
+		<td class="hide">The product is assessed based on the results gathered by strict standard tests established by experiments, and are given a rating of one star to five stars according to the actual outcomes.</td>
+		<td>★★★★</td>
+	</tr>
+</table>
+<script>
+	new Vue({
+		el: '#evaluation',
+		data: {
+			isActive: true
+		}
+	})
+	new Vue({
+		el: '#successful',
+		data: {
+			isActive: true
+		}
+	})
+</script>
+</body>
+</html>

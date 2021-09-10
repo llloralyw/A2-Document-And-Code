@@ -1,0 +1,58 @@
+<section class="order" id="order">
+  <h1>ORDER</h1>
+  <h2>You are about to commit to pay for the following products:</h2>
+  <p class="red">Please complete the form and press 'Send Order'.</p>
+  <p><span class="txt">Your Name</span>
+    <input type="text" v-model="message1" id="name">
+  </p>
+  <p><span class="txt">Telephone number</span>
+    <input type="text" v-model="message2" id="number">
+  </p>
+  <p><span class="txt">Receiving address</span>
+    <input type="text" class="i1" v-model="message3" id="address">
+  </p>
+  </p>
+  <p><span class="txt">Remarks</span>
+    <input type="text" class="i1" value="" v-model="message4" id="remarks">
+  </p>
+  </p>
+  <p><span>
+    <input type="button" value="Send Order" class="sub" onclick="checkForm();">
+    </span>
+    <input type="reset" value="Cancel Order" class="res">
+  </p>
+</section>
+
+<script>
+  function checkForm() {
+    var name = document.getElementById("name").value;
+    var number = document.getElementById("number").value;
+    var address = document.getElementById("address").value;
+    var remarks = document.getElementById("remarks").value;
+    var tr = document.createElement("tr");
+    var str = "";
+    if(name == "") {
+      alert("Please fill in your name");
+      return;
+    }
+    str += "<td>" + name + "</td>";
+    if(number == "") {
+      alert("Please fill in telephone number");
+      return;
+    }
+    str += "<td>" + number + "</td>";
+    if(address == "") {
+      alert("Please fill in receiving address");
+      return;
+    }
+    str += "<td>" + address + "</td>"
+    if(remarks == "") {
+      alert("Please fill in remarks");
+      return;
+    }
+    str += "<td>" + remarks + "</td>"
+    tr.innerHTML = str;
+    document.getElementById("successful").appendChild(tr);
+
+  }
+</script>

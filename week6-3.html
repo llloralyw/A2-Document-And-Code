@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 6-3</title>
+<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+  <select>
+    <option v-for="site in sites">
+      {{ site.name }}
+    </option>
+  </select>
+</div>
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    sites: [
+      { name: 'Amazon' },
+      { name: 'Google' },
+      { name: 'Taobao' }
+    ]
+  }
+})
+</script>
+</body>
+</html>
